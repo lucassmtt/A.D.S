@@ -6,32 +6,45 @@
 
 
 #include <stdio.h>
-#include <stdlib.h>
 
+int main()
+{
+        int lado,
+            count=1;
 
-int main(){
-    
-    int coluna, linha, num, i;
-    printf("Digite um número para criar um quadrado: ");
-    scanf("%d", &num);
+        printf("Lado do quadrado: ");
+        scanf("%d", &lado);
 
-    for (coluna = 0; coluna < num; coluna++){
-        
-        for (linha = 0; linha <num; linha++){            
-
-            
-            if (linha == 0 | linha == num - 1){
-                printf("*");
-                if (linha >= 1){
-                    for (i=0; i < num; i++){
-                        printf(" ");
-                    }    
-                }
-   
-            }
-
-
+        //Imprimindo a primeira linha
+        while(count<=lado)
+        {
+            printf("*");
+            count++;
         }
         printf("\n");
-    }
+
+        count=1;
+        while( count <= lado*(lado-2))
+        {
+            if( (count%lado == 1))
+                printf("*");
+            else
+                if( (count%lado == 0))
+                    printf("*\n");
+                else
+                    printf(" ");
+
+            count++;
+        }
+
+        //Imprimindo a primeira linha
+        count=1;
+        while(count<=lado)
+        {
+            printf("*");
+            count++;
+        }
+        printf("\n");
+
+
 }
