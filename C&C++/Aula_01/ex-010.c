@@ -12,7 +12,6 @@ int main(){
 
     int cont, num;
     int numeros[10];
-    int maiores_numeros[2];
     
     cont = 0;
 
@@ -62,4 +61,3 @@ int main(){
 
     return 0;
 }
-
