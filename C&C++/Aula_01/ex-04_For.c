@@ -21,30 +21,31 @@ int main(){
 
     //Vendo qual é o maior número
     if(valorUm > valorDois){
-        //Delarando um contador e a variável que vai indicar quais números são pares
-        int delta, cont;
+        //Delarando um contador, soma e a variável que vai indicar quais números são pares
+        int delta, cont, soma;
 
         //Calculando a variação
         delta = valorUm - valorDois;
 
-        for(delta, cont=0; cont < delta; cont++){
+        for(delta, soma=0, cont=0; cont < delta; cont++){
             //Verificando se o número é par
             if (cont % 2 == 0){
+                soma += cont;
                 printf("%d \n", cont);
             }
         }
+        printf("O total somando todos os números pares no intervalo de %d e %d foi %d.", valorUm, valorDois, soma);
     }
     else{
-        int delta, cont;
+        int delta, cont, soma;
         delta = valorDois - valorUm;
 
-        for (delta, cont=0; cont < delta; cont++){
+        for (delta, soma=0, cont=0; cont < delta; cont++){
             if (cont % 2 == 0){
+                soma += cont;
                 printf("%d \n", cont);
             }
         }
+        printf("O total somando todos os números pares no intervalo de %d e %d foi %d.", valorUm, valorDois, soma);
     }
-
-
-
 }
