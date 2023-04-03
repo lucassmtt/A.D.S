@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <title>Usando Python Dentro do Navegador</title>
+</head>
+<body>
+    <py-config>
+        packages = ["time"]
+    </py-config>
+    <py-script>
+        from time import sleep
+        
+        
+        for c in range(10):
+            print(c)
+            sleep(2)
+    </py-script>
+</body>
+</html>
