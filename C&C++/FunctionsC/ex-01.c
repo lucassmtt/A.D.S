@@ -23,7 +23,6 @@ float Dividir(float numero_01, float numero_02){
     return resultado;
 }
 
-
 int main(){
 int x = 0;
 
