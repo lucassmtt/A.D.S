@@ -4,7 +4,7 @@ class ex01 {
     public static void main(String[] args) {
         Random MyRandom = new Random();
 
-        int meuVetor[] = new int[100];
+        int[] meuVetor = new int[100];
         for (int i = 0; i < 100; i++) {
             meuVetor[i] = MyRandom.nextInt(1000);
         }
