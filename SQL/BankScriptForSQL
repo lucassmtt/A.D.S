@@ -1,0 +1,45 @@
+CREATE TABLE Bank (
+    Bacen INT PRIMARY KEY,
+    Name VARCHAR(30)
+);
+
+CREATE TABLE CheckingAccount (
+    NumberAccount INT PRIMARY KEY,
+    Agency INT,
+    Balance DOUBLE,
+    Digit INT,
+    OpenDate DATE,
+    Password VARCHAR(255),
+    Bacen INT,
+    FOREIGN KEY (Bacen) REFERENCES Bank(Bacen)
+);
+
+CREATE TABLE Transaction (
+    NumberTransaction INT PRIMARY KEY,
+    Value DOUBLE,
+    NewBalance DOUBLE,
+    OldBalance DOUBLE,
+    DateTime DATETIME,
+    NumberAccount INT,
+    FOREIGN KEY (NumberAccount) REFERENCES CheckingAccount(NumberAccount)
+);
+
+CREATE TABLE LegalPerson (
+    CNPJ VARCHAR(25) PRIMARY KEY,
+    Name VARCHAR(255),
+    Phone VARCHAR(255),
+    Email VARCHAR(255),
+    NumberAccount INT,
+    FOREIGN KEY (NumberAccount) REFERENCES CheckingAccount(NumberAccount)
+);
+
+CREATE TABLE NaturalPerson (
+    CPF VARCHAR(25) PRIMARY KEY,
+    Name VARCHAR(255),
+    Phone VARCHAR(255),
+    Email VARCHAR(255),
+    NumberAccount INT,
+    FOREIGN KEY (NumberAccount) REFERENCES CheckingAccount(NumberAccount)
+);
+
+--Lucas Gabriel Motta de Freitas
